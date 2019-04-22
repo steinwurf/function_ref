@@ -1,0 +1,20 @@
+[
+    {
+        "name": "waf-tools",
+        "resolver": "git",
+        "method": "semver",
+        "major": 4,
+        "sources": [
+            "github.com/steinwurf/waf-tools.git"
+        ]
+    },
+    {
+        "name": "function_ref-source",
+        "resolver": "git",
+        "method": "checkout",
+        "checkout": "e3d8fcb",
+        "sources": [
+            "github.com:steinwurf/function_ref-source.git"
+        ]
+    }
+]
