@@ -23,7 +23,6 @@ def build(bld):
 
         # The actual sources are stored outside this repo - so we manually
         # add them for the solution generator
-        bld.solution_name = 'foo.sln'
         bld.msvs_extend_sources = [sources]
 
         # Only build tests when executed from the top-level wscript,
