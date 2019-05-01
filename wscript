@@ -7,7 +7,6 @@ from waflib import Task, TaskGen
 APPNAME = 'function_ref'
 VERSION = '1.0.0'
 
-
 def build(bld):
     bld.env.append_unique(
         'DEFINES_STEINWURF_VERSION',
@@ -21,6 +20,12 @@ def build(bld):
         export_includes=[sources])
 
     if bld.is_toplevel():
+
+        # The actual sources are stored outside this repo - so we manually
+        # add them for the solution generator
+        bld.solution_name = 'foo.sln'
+        bld.msvs_extend_sources = [sources]
+
         # Only build tests when executed from the top-level wscript,
         # i.e. not when included as a dependency
 
