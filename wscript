@@ -14,11 +14,11 @@ def build(bld):
         'STEINWURF_FUNCTION_REF_VERSION="{}"'.format(VERSION))
 
     # Path to the function_ref repo
-    path = bld.dependency_path("function_ref-source")
+    sources = bld.dependency_node("function_ref-source")
 
     # Export own includes
     bld(name='function_ref',
-        export_includes=path)
+        export_includes=[sources])
 
     if bld.is_toplevel():
         # Only build tests when executed from the top-level wscript,
@@ -26,6 +26,6 @@ def build(bld):
 
         bld.program(
             features='cxx test',
-            source=bld.root.find_dir(path).ant_glob('tests/*.cpp'),
+            source=sources.ant_glob('tests/*.cpp'),
             target='function_ref_tests',
             use=['function_ref'])

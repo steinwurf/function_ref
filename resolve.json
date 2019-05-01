@@ -12,9 +12,9 @@
         "name": "function_ref-source",
         "resolver": "git",
         "method": "checkout",
-        "checkout": "e3d8fcb",
+        "checkout": "b2b125ebfcd0952383207791f351073d10648e8f",
         "sources": [
-            "github.com:steinwurf/function_ref-source.git"
+            "github.com/TartanLlama/function_ref"
         ]
     }
 ]
