@@ -2,8 +2,8 @@
     {
         "name": "waf-tools",
         "resolver": "git",
-        "method": "checkout",
-        "checkout": "msvs_extend_sources",
+        "method": "semver",
+        "major": 4,
         "sources": [
             "github.com/steinwurf/waf-tools.git"
         ]
