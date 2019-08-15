@@ -18,7 +18,7 @@ def build(bld):
 
     # Export own includes
     bld(name='function_ref',
-        export_includes=path)
+        export_includes=os.path.join(path, 'include'))
 
     if bld.is_toplevel():
         # Only build tests when executed from the top-level wscript,
